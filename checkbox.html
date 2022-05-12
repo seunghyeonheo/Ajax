@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            document.getElementById('chkLCD').checked=true;
+        }
+        function uncheck(){
+            document.getElementById('chkLCD').checked=false;
+        }
+
+        function check2(id){
+            document.getElementById(id).checked=true;
+        }
+        function uncheck2(id){
+            document.getElementById(id).checked=false;
+        }
+
+        function getOption(){
+            let ldc = document.getElementById('chkLCD');
+            let ram = document.getElementById('chkRAM');
+            let printer = document.getElementById('chkPrinter');
+            let str = '';
+            if(lcd.checked){
+                str = lcd.value + " ";
+            }
+
+            if(ram.checked){
+                str=str + ram.value + " ";
+            }
+
+            if(printer.checked){
+                str = str + printer.value; + " ";
+            }
+
+            document.getElementById('opt').value = str;
+
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <p>상품 옵션 선택</p>
+        <P>
+        <input type="checkbox" id="chkLCD" value="LCD 24 "/>
+        <button onclick="check()">LCD 24 선택</button>
+        <button onclick="uncheck()">LCD 24 선택 안함</button>
+        </P>
+        <P>
+        <input type="checkbox" id="chkRAM" value="RAM 2G"/>
+        <button onclick="check2('chkRAM')">RAM 2G 선택</button>
+        <button onclick="uncheck2('chkRAM')">RAM 2G 안함</button>
+        </P>
+        <P>
+        <input type="checkbox" id="chkPrinter" value="프린터"/>
+        <button onclick="check2('chkPrinter')">프린터 선택</button>
+        <button onclick="uncheck2('chkPrinter')">프린터 선택 안함</button>
+        </P>
+       
+
+  
+    </form>
+</body>
+</html>

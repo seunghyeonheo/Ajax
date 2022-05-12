@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function btnAdd(){
+            let parentdiv = document.getElementById('textHolder');
+            let divel = document.createElement('div');
+            divel.type ="file"
+            divel.appendChild(document.createTextNode("파일선택1 input type='file' name='file'"));
+
+    }   
+    </script>
+</head>
+<body>
+    <button onclick="btnAdd()">파일 선택 추가</button>
+    <button onclick="btnAdd()">파일 선택 제거</button>
+
+    <div id="textHolder">
+        파일선택 1:
+    <input type='file' name='file'></div>
+</body>
+</html>

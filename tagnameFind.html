@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>Hello World!</P>
+    <p>The Dom is very useful</p>
+    <p>This example demonstrates the 
+        <b>getElementById</b> method</p>
+
+        <p id="demo"></p>
+        <script>
+            let x= document.getElementsByTagName('p');
+            console.log(x.length);
+            document.getElementById('demo').innerHTML =
+            'The first papagraph (index 1) is: ' + x[1].innerHTML;
+        </script>
+</p></body>
+</html>
